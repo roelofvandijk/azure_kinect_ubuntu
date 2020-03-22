@@ -13,7 +13,7 @@ source ~/.bashrc
 sudo rosdep init
 rosdep update
 
-# install Azure Kinect SDK
+# install Azure Kinect SDK following https://github.com/microsoft/Azure-Kinect-Sensor-SDK/blob/develop/docs/usage.md
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
 sudo apt update
