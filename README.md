@@ -1,3 +1,4 @@
-# Azure Kinect ROS installation on Ubuntu 18.04
+# Azure Kinect Install script
 
-Contains an installation script for Ubuntu 18.04.
+Installation script for Azure Kinect ROS driver on fresh Ubuntu 18.04 install.
+
