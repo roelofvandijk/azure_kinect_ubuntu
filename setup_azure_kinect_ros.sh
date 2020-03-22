@@ -1,5 +1,5 @@
 # install necessary tools
-sudo apt-get update 
+sudo apt update && sudo apt -y upgrade
 sudo apt install curl
 
 # install ROS following http://wiki.ros.org/melodic/Installation/Ubuntu
@@ -16,15 +16,15 @@ rosdep update
 # install Azure Kinect SDK
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
-sudo apt-get update
-sudo apt install libk4a1.3
-sudo apt install libk4a1.3-dev
-sudo apt install k4a-tools
+sudo apt update
+sudo apt install -y libk4a1.3 libk4a1.3-dev k4a-tools
 
 # clone Azure Kinect ROS drivers, make workspace
-mkdir catkin_ws/src
+mkdir -p catkin_ws/src
 cd catkin_ws/src
 git clone https://github.com/microsoft/Azure_Kinect_ROS_Driver
 cd ..
 catkin_make
 
+# [optional] make Azure Kinect available without being root
+# sudo curl https://raw.githubusercontent.com/microsoft/Azure-Kinect-Sensor-SDK/develop/scripts/99-k4a.rules >> /etc/udev/rules.d
